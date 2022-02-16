@@ -1,0 +1,118 @@
+<div class="layout-topbar">
+
+
+
+  <a class="p-link layout-menu-button layout-topbar-button" href="#" (click)="appMain.toggleMenu($event)">
+
+
+
+    <i class="pi pi-bars"></i>
+
+
+
+  </a>
+
+
+
+
+
+  <a class="p-link mt-3 layout-topbar-title" routerLink="/">
+
+
+
+    <h2 style="color: var(--text-color)"  >Gustavo Dourado Santos</h2>
+
+
+
+  </a>
+
+
+
+
+
+  <a class="p-link layout-topbar-menu-button layout-topbar-button" href="#" (click)="appMain.toggleTopMenu($event)">
+
+
+
+    <i class="pi pi-ellipsis-v"></i>
+
+
+
+  </a>
+
+
+
+
+
+  <div class="layout-topbar-menu" [ngClass]="{
+
+
+
+      'layout-topbar-menu-mobile-active': appMain.topMenuActive
+
+
+
+    }">
+
+
+
+    <h5>Contatos</h5>
+
+
+
+    <a class="p-link layout-topbar-button p-1" href="https://www.linkedin.com/in/gustavodouradosantos/" target="_blank">
+
+
+
+      <i class="pi pi-linkedin"></i>
+
+
+
+      <span class="m-2">Linkedin</span>
+
+
+
+    </a>
+
+
+
+    
+
+    <a class="p-link layout-topbar-button p-1" href="https://github.com/Dourado8083" target="_blank">
+
+
+
+      <i class="pi pi-github"></i>
+
+
+
+      <span class="m-2">GitHub</span>
+
+
+
+    </a>
+
+
+
+
+
+    <a class="p-link layout-topbar-button p-1"
+      href="https://api.whatsapp.com/send?phone=5511956594342&text=Ol%C3%A1%21+Gustavo, tudo bem ?&lang=pt_pt"
+      target="_blank">
+
+
+
+      <i class="pi pi-whatsapp"></i>
+
+
+
+      <span class="m-2">WhatsApp</span>
+
+
+
+    </a>
+  </div>
+
+
+
+</div>

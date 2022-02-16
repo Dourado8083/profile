@@ -1,0 +1,26 @@
+.star-rating {
+	font-size: 18px;
+	position: relative;
+	line-clamp: 1;
+	white-space: nowrap;
+}
+
+.star-rating:before {
+	content: '\2605\2605\2605\2605\2605';
+	color: #e5e5e5;
+	filter: drop-shadow(0 0.6rem 0.3rem rgba(0, 0, 0, 0.05));
+}
+
+.star-rating__fill {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	line-break: loose;
+}
+
+.star-rating__fill:before {
+	content: '\2605\2605\2605\2605\2605';
+	color: var(--cyan-500);
+}

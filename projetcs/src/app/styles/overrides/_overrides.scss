@@ -1,0 +1,17 @@
+// Suggested location to add your overrides so that migration would be easy by just updating the SASS folder in the future
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+	color: var(--text-color-primary);
+	background-color: var(--text-color-primary);
+	border: 1px solid var(--text-color);
+	border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--primary-color);
+	border: 1px solid var(--primary-color);
+}

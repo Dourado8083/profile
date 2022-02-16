@@ -1,0 +1,98 @@
+<div
+id="layout-config"
+class="layout-config"
+[ngClass]="{ 'layout-config-active': appMain.configActive }"
+(click)="appMain.onConfigClick($event)"
+>
+<a
+style="cursor: pointer"
+id="layout-config-button"
+class="layout-config-button"
+(click)="onConfigButtonClick($event)"
+>
+<i class="pi pi-cog"></i>
+</a>
+<button
+pButton
+pRipple
+type="button"
+icon="pi pi-times"
+class="p-button-rounded p-button-danger p-button-text layout-config-close"
+(click)="onConfigButtonClick($event)"
+></button>
+<div class="layout-config-content">
+<h6 class="mt-0">Escala</h6>
+<div class="config-scale">
+<button
+pButton
+pRipple
+type="button"
+icon="pi pi-minus"
+(click)="decrementScale()"
+class="p-button-rounded p-button-text"
+[disabled]="scale === scales[0]"
+></button>
+<i
+*ngFor="let item of scales"
+class="pi pi-circle-fill"
+[ngClass]="{ 'scale-active': item === scale }"
+></i>
+<button
+pButton
+pRipple
+type="button"
+icon="pi pi-plus"
+(click)="incrementScale()"
+class="p-button-rounded p-button-text"
+[disabled]="scale === scales[scales.length - 1]"
+></button>
+</div>
+
+
+
+<!-- <h6>Estilo de Inputs</h6>
+<div class="p-formgroup-inline">
+<div class="field-radiobutton">
+<p-radioButton
+name="inputStyle"
+value="outlined"
+[(ngModel)]="config.inputStyle"
+(onClick)="onInputStyleChange()"
+inputId="inputStyle1"
+></p-radioButton>
+<label for="inputStyle1">Transparente</label>
+</div>
+<div class="field-radiobutton">
+<p-radioButton
+name="inputStyle"
+value="filled"
+[(ngModel)]="config.inputStyle"
+(onClick)="onInputStyleChange()"
+inputId="inputStyle2"
+></p-radioButton>
+<label for="inputStyle2">Preenchido</label>
+</div>
+</div> -->
+
+
+
+<div class="p-formgroup-inline">
+<h6>Tema</h6>
+<div class="grid free-themes">
+<!-- * Light -->
+<a class="col-3 text-center" (click)="changeTheme('light', false)">
+<i class="pi pi-sun"></i>
+</a>
+
+
+
+<!-- * Dark -->
+<div class="col-3 text-center">
+<a class="col-3 text-center" (click)="changeTheme('dark', true)">
+<i class="pi pi-moon"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>

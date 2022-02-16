@@ -1,0 +1,38 @@
+<div id="home" class="surface-0 overflow-hidden">
+	<div id="features" class="px-2 m-1">
+		<div class="grid justify-content-center">
+			<div class="col-12 text-center m-2">
+				<h2 class="text-900 text-primary font-normal mb-1">Sobre mim</h2>
+			</div>
+
+			<div
+				class="col-12"
+				style="
+					height: auto;
+					padding: 2px;
+					margin: 2px;
+					border-radius: 10px;
+					background: var(--primary-color);
+				"
+			>
+				<div class="p-1 surface-card h-full" style="border-radius: 8px">
+					<div
+						class="flex align-items-center justify-content-center bg-yellow-200 m-3"
+						style="width: 3.5rem; height: 3.5rem; border-radius: 10px"
+					>
+						<i class="pi pi-fw pi-user text-2xl text-yellow-700"></i>
+					</div>
+
+					<div *ngFor="let paragraph of paragraphs">
+						<p
+							class="white-space-normal m-3 text-900 text-xl"
+							style="white-space: pre-wrap"
+						>
+							{{ paragraph }}
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

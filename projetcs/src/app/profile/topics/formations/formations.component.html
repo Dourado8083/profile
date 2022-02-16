@@ -1,0 +1,52 @@
+<div id="home" class="surface-0 overflow-hidden">
+	<div id="features" class="px-2 m-1">
+		<div class="grid justify-content-center">
+			<div class="col-12 text-center m-2">
+				<h2 class="text-900 text-primary font-normal mb-1">Formações</h2>
+			</div>
+
+			<div
+				class="col-12"
+				style="
+					height: auto;
+					padding: 2px;
+					margin: 2px;
+					border-radius: 10px;
+					background: var(--primary-color);
+				"
+			>
+				<div class="p-1 surface-card h-full" style="border-radius: 8px">
+					<div
+						class="flex align-items-center justify-content-center bg-indigo-200 m-3"
+						style="width: 3.5rem; height: 3.5rem; border-radius: 10px"
+					>
+						<i class="pi pi-fw pi-home text-2xl text-indigo-700"></i>
+					</div>
+
+					<div
+						class="ml-4 mb-4 p-1 list-disc"
+						*ngFor="let formation of formations"
+					>
+						<p class="text-2xl font-medium mb-0 block">
+							• {{ formation.name }}
+						</p>
+						<div>
+							<h5 class="text-blue-500 mr-1">
+								Instituição:
+								<span class="text-700 lg:text-xl">
+									{{ formation.institution }}</span
+								>
+							</h5>
+						</div>
+						<div>
+							<h5 class="text-blue-500 mr-1">
+								Período:
+								<span class="text-700 lg:text-xl"> {{ formation.end }}</span>
+							</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
